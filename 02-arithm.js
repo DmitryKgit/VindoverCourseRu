@@ -89,7 +89,7 @@ const task11 = (a) => {
 // task11(1)
 
 const task12 = (a) => {
-    console.log(2 / a)
+    console.log(3 - a)
 }
 
 // task12(1)
@@ -110,7 +110,8 @@ const task14 = (a) => {
 // task14(7)
 
 const task15 = (a, b, c) => {
-    console.log((c - a - b) * -1)
+    // console.log((c - a - b) * -1)
+    console.log(a + b - c)
 }
 
 // task15(1, 3, 3)
@@ -191,7 +192,7 @@ const task24 = (w, h, x, y) => {
 // task24(960, 540, 960, 540)
 
 const task25 = (w, h, p) => {
-    console.log((p * 4 / 3) ** 0.5)
+    console.log((p * w / h) ** 0.5)
 }
 
 task25(4, 3, 120000)

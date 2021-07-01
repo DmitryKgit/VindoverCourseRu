@@ -24,7 +24,176 @@ const task5 = (t) => {
 // task5(1584139518)
 
 const task6 = (t) => {
-    console.log(Math.floor(t / 3600) % 24, Math.floor(t / 60) % 60)
+    console.log((Math.floor(t / 3600) + 3) % 24, Math.floor(t / 60) % 60)
 }
 
-task6()
+// task6(4567)
+// task6(1619633183)
+// task6(1584139518)
+
+const task7 = (t) => {
+    // const secAfterLastWeek = Math.floor(t % (3600 * 24 * 7))
+    // console.log((Math.floor(secAfterLastWeek / (3600 * 24)) + 4) % 7)
+    console.log((Math.floor(t / 3600 / 24) + 4) % 7)
+}
+
+// task7(4567)
+// task7(1619633183)
+// task7(1584139518)
+// task7(1529269035)
+
+const task8 = (a) => {
+    console.log(Math.floor(a / 10), a % 10)
+}
+
+// task8(38)
+// task8(10)
+// task8(91)
+
+const task9 = (a) => {
+    // console.log(Math.floor(a % 100 / 10))
+    console.log(Math.floor(a / 10) % 10)
+}
+
+// task9(10)
+// task9(65)
+// task9(7898)
+
+const task10 = (a) => {
+    // console.log(Math.floor(a % 1000 / 100))
+    console.log(Math.floor(a / 100) % 10)
+}
+
+// task10(100)
+// task10(654)
+// task10(7986)
+
+const task11 = (a, b) => {
+    console.log(Math.floor((b - a) / 2) + 1)
+}
+
+// task11(1, 5)
+// task11(-3, 4)
+// task11(90, 99)
+
+const task12 = (a) => {
+    console.log(a % 2)
+}
+
+// task12(0)
+// task12(1)
+// task12(5)
+// task12(10)
+
+const task13 = (a) => {
+    console.log(1 + a % 2)
+}
+
+// task13(0)
+// task13(1)
+// task13(5)
+// task13(10)
+
+const task14 = (a) => {
+    console.log(1 - a % 2)
+}
+
+// task14(0)
+// task14(1)
+// task14(5)
+// task14(10)
+
+const task15 = (a) => {
+    console.log(2 - a % 2)
+}
+
+// task15(0)
+// task15(1)
+// task15(5)
+// task15(10)
+
+const task16 = (n, x) => {
+    console.log(x % n + 1)
+}
+
+// task16(5, 3)
+// task16(5, 4)
+// task16(10, 10)
+
+const task17 = (n, x) => {
+    // console.log(n - (n - x + 1) % n)
+    console.log((x - 2 + n) % n + 1)
+}
+
+// task17(5, 3)
+// task17(5, 1)
+// task17(10, 10)
+
+const task18 = (n, x, m) => {
+    console.log((x - 1 + m) % n + 1)
+}
+
+// task18(5, 3, 10)
+// task18(5, 5, 5)
+// task18(10, 5, 17)
+
+const task19 = (n, x, m) => {
+    console.log((x - 1 - m % n + n) % n + 1)
+    // console.log((x - 1 - m + m * n) % n + 1)
+}
+
+// task19(5, 3, 10)
+// task19(5, 5, 5)
+// task19(10, 5, 17)
+
+const task20 = (h, m) => {
+    console.log(Math.floor((h * 60 - m) / 60), (60 - m) % 60)
+}
+
+// task20(5, 1)
+// task20(7, 333)
+// task20(1, 59)
+
+const task21 = (n, x, y) => {
+    // console.log(Math.ceil((x + 1) / n), Math.ceil((y + 1) / n))
+    console.log(Math.floor(x / n) + 1, Math.floor(y / n) + 1)
+}
+
+// task21(10, 5, 5)
+// task21(10, 56, 30)
+// task21(20, 99, 101)
+
+const task22 = (n, k) => {
+    // console.log(Math.ceil((x + 1) / n), Math.ceil((y + 1) / n))
+    console.log(Math.ceil(k / n), (k - 1) % n + 1)
+}
+
+// task22(5, 11)
+// task22(8, 19)
+// task22(10, 50)
+
+const task23 = (bw, bh, pw, ph) => {
+    console.log(Math.floor(bw / pw) * Math.floor(bh / ph))
+}
+
+// task23(500, 500, 300, 300)
+// task23(500, 500, 200, 200)
+// task23(1200, 700, 400, 350)
+// task23(1000, 500, 250, 200)
+
+const task24 = (h, m, n) => {
+    console.log(Math.floor((h * 60 + m + n) / 60) % 24, (m + n) % 60)
+}
+
+// task24(10, 30, 40)
+// task24(23, 45, 15)
+// task24(22, 15, 310)
+
+// не понятно, ещё раз надо объяснить
+const task25 = (y, m, n) => {
+    console.log(y + Math.floor((m - 1 + n) / 12), (m - 1 + n) % 12 + 1)
+}
+
+task25(2020, 11, 2)
+task25(2008, 9, 144)
+task25(2018, 11, 1)
