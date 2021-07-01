@@ -190,6 +190,21 @@ const task13 = (a) => {
     console.log(max(...a))
 }
 
-task13([4, 2, 5])
-task13([7, 2, 3])
-task13([-1])
+// task13([4, 2, 5])
+// task13([7, 2, 3])
+// task13([-1])
+
+const task14 = (f, args) => {
+    console.log(f(...args))
+}
+
+// task14(mul2, [7])
+// task14(sumPair, [4, 3])
+// task14(isEven, [3])
+// task14(endsWith47, [74])
+// task14(abs, [-22])
+// task14(sign, [-22])
+// task14(startsWith, [[1, 2, 3], [1, 2]])
+// task14(endsWith, [[1, 2, 3], [1, 2]])
+// task14(sum, [1, 2, 3])
+// task14(max, [3, 2, 1])
