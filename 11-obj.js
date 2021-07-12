@@ -691,19 +691,99 @@ const task56 = (a) => {
 
 const task57 = (a) => {
     const obj = {}
-    for (const [key, val] of a) {
-        if (obj[key] === undefined) {
-            obj[key] = [val]
-        }
-        else {
-            obj[key] = obj[key].concat(val)
+    for (const key in a) {
+        for (const val of a[key]) {
+            if (obj[val] === undefined) {
+                obj[val] = [key]
+            }
+            else {
+                obj[val] = obj[val].concat(key)
+            }
         }
     }
     console.log(obj)
 }
 
-task56({
-    k1: ['v1', 'v2', 'v3'],
-    k2: ['v2', 'v4'],
-    k3: ['v3', 'v5']
-})
+// task57({
+//     k1: ['v1', 'v2', 'v3'],
+//     k2: ['v2', 'v4'],
+//     k3: ['v3', 'v5']
+// })
+
+const task58 = (a) => {
+    const obj = {}
+    for (const val of a) {
+        for (let i = 1; i < val.length; i++) {
+            if (obj[val[i]] === undefined) {
+                obj[val[i]] = [val[i], val[0]]
+            }
+            else {
+                obj[val[i]] = obj[val[i]].concat([val[0]])
+            }
+        }
+    }
+    console.log(Object.values(obj))
+}
+
+// task58([
+//     ['k1', 'v1', 'v2', 'v3'],
+//     ['k2', 'v2', 'v4'],
+//     ['k3', 'v3', 'v5']
+// ])
+
+let task59 = (a) => {
+    const obj = {}
+    for (const { department, name, salary } of a) {
+        if (obj[department] === undefined) {
+            obj[department] = {
+                avg: salary,
+                best: [name],
+                cnt: 1,
+                sum: salary,
+                salary: salary
+            }
+        }
+        else {
+            obj[department].sum += salary 
+            obj[department].cnt++
+            if (obj[department].salary === salary) {
+                obj[department].best = obj[department].best.concat([name])
+            }
+            if (obj[department].salary < salary) {
+                obj[department].best = [name]
+            }
+            obj[department].avg = obj[department].sum / obj[department].cnt 
+        }
+        
+    }
+    for (const key in obj) {
+        delete obj[key].cnt
+        delete obj[key].sum
+        delete obj[key].salary
+    }
+    console.log(obj)
+}
+
+// task59([
+//     { department: 'one', name: 'Vasya', salary: 10000 },
+//     { department: 'two', name: 'Petya', salary: 12000 },
+//     { department: 'one', name: 'Misha', salary: 9000 },
+//     { department: 'two', name: 'Fedor', salary: 12000 },
+//     { department: 'three', name: 'Olga', salary: 9000 },
+//     { department: 'three', name: 'Ivan', salary: 10000 },
+//     { department: 'three', name: 'Anton', salary: 8000 }
+// ])
+
+const setHandlers = (a, b) => {
+    a[onclick] = () => {
+        console.log('a is clicked')
+    }
+    a[onkeydown] = ( { key }) => {
+        console.log(`Key ${key} is down on`)
+    }
+    b[onclick] = () => {
+        console.log('b is clicked')
+    }
+}
+
+setHandlers()

@@ -1096,11 +1096,11 @@ const task81 = (a) => {
 // task81(A([A([1, 3]), A([3, 1]), A([2, 1])]))
 
 const task82 = (a) => {
-    let maxP = (a[0][0] + a[0][1]) * 2
+    let maxP = (a[0][0] + a[0][1])
     for (const [x, y] of a) {
-        maxP = (x + y) * 2 > maxP ? (x + y) * 2 : maxP
+        maxP = (x + y) > maxP ? (x + y) : maxP
     }
-    console.log(maxP)
+    console.log(maxP * 2)
 }
 
 // task82(A([A([5, 3])]))

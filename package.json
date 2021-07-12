@@ -1,7 +1,6 @@
 {
   "name": "coursevindoverru",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +14,14 @@
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DmitryKgit/VindoverCourseRu.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DmitryKgit/VindoverCourseRu/issues"
+  },
+  "homepage": "https://github.com/DmitryKgit/VindoverCourseRu#readme",
+  "description": ""
 }
